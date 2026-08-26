@@ -1,68 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diwa AI Status</title>
-    <meta
-      name="description"
-      content="Live status and uptime history for Diwa AI's public services."
-    />
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <header class="topbar">
-      <div class="topbar-inner">
-        <a class="brand" href="https://www.diwa.ai" id="brand-link">
-          <img class="brand-logo" src="./assets/diwa-logo.png" alt="Diwa AI" />
-          <span class="brand-divider" aria-hidden="true"></span>
-          <span class="brand-title">Status</span>
-        </a>
-        <nav class="topbar-nav" id="topbar-nav"></nav>
-      </div>
-    </header>
-
-    <main class="container">
-      <section class="hero">
-        <div class="hero-icon" id="hero-icon" aria-hidden="true"></div>
-        <h1 class="hero-title" id="hero-title">Checking status&hellip;</h1>
-        <p class="hero-subtitle" id="hero-subtitle"></p>
-        <div class="uptime-pill" id="uptime-pill"></div>
-        <div class="hero-actions">
-          <a class="pill-button" id="rss-button" href="./feed.xml">
-            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-              <path
-                fill="currentColor"
-                d="M4 4a1 1 0 000 2 14 14 0 0114 14 1 1 0 002 0A16 16 0 004 4zm0 6a1 1 0 000 2 8 8 0 018 8 1 1 0 002 0 10 10 0 00-10-10zm2 6a2 2 0 100 4 2 2 0 000-4z"
-              />
-            </svg>
-            Subscribe via RSS
-          </a>
-          <a class="pill-button" id="github-button" href="#" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-              <path
-                fill="currentColor"
-                d="M12 2a10 10 0 00-3.16 19.5c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.55 9.55 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.35 4.68-4.58 4.93.36.31.68.92.68 1.85v2.75c0 .26.18.57.69.48A10 10 0 0012 2z"
-              />
-            </svg>
-            Watch on GitHub
-          </a>
-        </div>
-      </section>
-
-      <section class="card services" id="services"></section>
-
-      <section class="incidents-section">
-        <h2 class="section-title">Past incidents</h2>
-        <div id="incidents"></div>
-      </section>
-
-      <footer class="footer">
-        <p id="footer-message"></p>
-        <a href="https://www.diwa.ai" class="back-link">&larr; Back to diwa.ai</a>
-      </footer>
-    </main>
-
-    <script src="./app.js"></script>
-  </body>
-</html>
+<!DOCTYPE html> <html lang=en> <head> <meta charset=utf-8> <meta content="width=device-width,initial-scale=1" name=viewport> <meta content=#333333 name=theme-color> <base href=/diwa-status/ > <link href=manifest.json rel=manifest crossorigin=use-credentials> <script>__SAPPER__={baseUrl:"/diwa-status",preloaded:[void 0,{}]};if('serviceWorker' in navigator)navigator.serviceWorker.register('/diwa-status/service-worker.js');(function(){try{eval("async function x(){}");var main="/diwa-status/client/client.a6ef6436.js"}catch(e){main="/diwa-status/client/legacy/client.9bb3f41d.js"};var s=document.createElement("script");try{new Function("if(0)import('')")();s.src=main;s.type="module";s.crossOrigin="use-credentials";}catch(e){s.src="/diwa-status/client/shimport@2.0.5.js";s.setAttribute("data-main",main);}document.head.appendChild(s);}());</script> <link href=client/client-31a52aa5.css rel=stylesheet><link href=client/createOctokit-a85f76c7.css rel=stylesheet><link href=client/index-b0b6455a.css rel=stylesheet> <title>Diwa AI Status</title> <script>// If `prefers-color-scheme` is not supported, fall back to light mode.
+      // In this case, light.css will be downloaded with `highest` priority.
+      if (typeof window !== "undefined" && typeof document !== "undefined" && "matchMedia" in window && window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+        document.documentElement.style.display = 'none';
+        document.head.insertAdjacentHTML(
+          'beforeend',
+          '<link rel="stylesheet" href={`${config.path}/themes/light.css`} onload="document.documentElement.style.display = \'\'">',
+        );
+      } </script> <link href=https://jasper-diwa-ai.github.io/diwa-status/themes/light.css rel=stylesheet media=(prefers-color-scheme:light)> <link href=https://jasper-diwa-ai.github.io/diwa-status/themes/dark.css rel=stylesheet media=(prefers-color-scheme:dark)><link href=https://jasper-diwa-ai.github.io/diwa-status/global.css rel=stylesheet><link href=https://raw.githubusercontent.com/upptime/upptime/master/assets/upptime-icon.svg rel=icon type=image/svg><link href=/logo-192.png rel=icon type=image/png> <link href=/diwa-status/client/client.a6ef6436.js rel=modulepreload as=script crossorigin=use-credentials><link href=/diwa-status/client/client-31a52aa5.css rel=preload as=style><link href=/diwa-status/client/index.25a17ed6.js rel=modulepreload as=script crossorigin=use-credentials><link href=/diwa-status/client/createOctokit.466ab2cb.js rel=modulepreload as=script crossorigin=use-credentials><link href=/diwa-status/client/inject_styles.803b7e80.js rel=modulepreload as=script crossorigin=use-credentials><link href=/diwa-status/client/createOctokit-a85f76c7.css rel=preload as=style><link href=/diwa-status/client/index-b0b6455a.css rel=preload as=style></head> <body> <div id=sapper> <nav class=svelte-a08hsz><div class="svelte-a08hsz container"> <ul class=svelte-a08hsz><li><a href=https://www.diwa.ai class=svelte-a08hsz target=_self>diwa.ai</a> </li> </ul></div> </nav> <main class=container> <header class=svelte-ngkazm> <p class="svelte-ngkazm lead">This page updates automatically from live checks against Diwa AI's public services.</header> <section class=svelte-8lnl4f><div class="svelte-68jxue loading"><svg class=svelte-68jxue height=38 stroke=#aaa width=38 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd><g stroke-width=2 transform="translate(1 1)"><circle cx=18 cy=18 r=18 stroke-opacity=.5></circle><path d="M36 18c0-9.94-8.06-18-18-18"><animateTransform attributeName=transform dur=1s from="0 18 18" repeatCount=indefinite to="360 18 18" type=rotate></animateTransform></path></g></g></svg></div> </section> <section class=svelte-8lnl4f><div class="svelte-68jxue loading"><svg class=svelte-68jxue height=38 stroke=#aaa width=38 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd><g stroke-width=2 transform="translate(1 1)"><circle cx=18 cy=18 r=18 stroke-opacity=.5></circle><path d="M36 18c0-9.94-8.06-18-18-18"><animateTransform attributeName=transform dur=1s from="0 18 18" repeatCount=indefinite to="360 18 18" type=rotate></animateTransform></path></g></g></svg></div> </section> <div class="svelte-fqsq6s f changed"><h2>Live Status</h2> <form class="svelte-fqsq6s f r"><div><input class=svelte-fqsq6s id=data_day name=d type=radio value=day><label class=svelte-fqsq6s for=data_day>24h</label></div> <div><input class=svelte-fqsq6s id=data_week name=d type=radio value=week checked><label class=svelte-fqsq6s for=data_week>7d</label></div> <div><input class=svelte-fqsq6s id=data_month name=d type=radio value=month><label class=svelte-fqsq6s for=data_month>30d</label></div> <div><input class=svelte-fqsq6s id=data_year name=d type=radio value=year><label class=svelte-fqsq6s for=data_year>1y</label></div> <div><input class=svelte-fqsq6s id=data_all name=d type=radio value=all><label class=svelte-fqsq6s for=data_all>all</label></div></form></div> <section class="svelte-fqsq6s live-status"><div class="svelte-68jxue loading"><svg class=svelte-68jxue height=38 stroke=#aaa width=38 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd><g stroke-width=2 transform="translate(1 1)"><circle cx=18 cy=18 r=18 stroke-opacity=.5></circle><path d="M36 18c0-9.94-8.06-18-18-18"><animateTransform attributeName=transform dur=1s from="0 18 18" repeatCount=indefinite to="360 18 18" type=rotate></animateTransform></path></g></g></svg></div> </section> <section><div class="svelte-68jxue loading"><svg class=svelte-68jxue height=38 stroke=#aaa width=38 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd><g stroke-width=2 transform="translate(1 1)"><circle cx=18 cy=18 r=18 stroke-opacity=.5></circle><path d="M36 18c0-9.94-8.06-18-18-18"><animateTransform attributeName=transform dur=1s from="0 18 18" repeatCount=indefinite to="360 18 18" type=rotate></animateTransform></path></g></g></svg></div> </section> <section><div class="svelte-68jxue loading"><svg class=svelte-68jxue height=38 stroke=#aaa width=38 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd><g stroke-width=2 transform="translate(1 1)"><circle cx=18 cy=18 r=18 stroke-opacity=.5></circle><path d="M36 18c0-9.94-8.06-18-18-18"><animateTransform attributeName=transform dur=1s from="0 18 18" repeatCount=indefinite to="360 18 18" type=rotate></animateTransform></path></g></g></svg></div></section></main> <footer class=svelte-jbr799><p>This page is <a href=https://github.com/jasper-diwa-ai/diwa-status>open source</a>, powered by <a href=https://upptime.js.org>Upptime</a></p> </footer></div> <script> try {
+        if (typeof window !== "undefined" && window.navigator && navigator.serviceWorker) {
+          navigator.serviceWorker.getRegistrations().then(function (registrations) {
+            for (let registration of registrations) {
+              registration.unregister();
+            }
+          });
+        }
+        if (typeof window !== "undefined" && "caches" in window) {
+          caches.keys().then(function (keyList) {
+            return Promise.all(
+              keyList.map(function (key) {
+                return caches.delete(key);
+              })
+            );
+          });
+        }
+      } catch (error) {} </script> 
