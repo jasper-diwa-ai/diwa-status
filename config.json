@@ -1,0 +1,31 @@
+{
+  "generatedAt": "2026-08-27T08:13:04.321Z",
+  "owner": "jasper-diwa-ai",
+  "repo": "diwa-status",
+  "sites": [
+    {
+      "name": "Diwa AI",
+      "url": "https://www.diwa.ai",
+      "slug": "diwa-ai"
+    },
+    {
+      "name": "Diwa API",
+      "url": "https://www.diwa.ai/api/v1/health",
+      "slug": "diwa-api"
+    }
+  ],
+  "page": {
+    "name": "Diwa AI Status",
+    "introMessage": "This page updates automatically from live checks against Diwa AI's public services.\n",
+    "navbar": [
+      {
+        "title": "diwa.ai",
+        "href": "https://www.diwa.ai"
+      }
+    ]
+  },
+  "links": {
+    "rss": "./feed.xml",
+    "github": "https://github.com/jasper-diwa-ai/diwa-status"
+  }
+}
